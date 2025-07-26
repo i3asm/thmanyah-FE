@@ -1,6 +1,8 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import SideBar from "@/components/sideBar/SideBar";
+import SearchBar from "@/components/SearchBar/SearchBar";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "podcast App",
@@ -15,11 +17,23 @@ export default function RootLayout({
   return (
       <html lang="en">
       <body>
-      <div className="grid grid-cols-[220px_1fr] p-6 min-h-screen">
+      <div className="grid md:grid-cols-[225px_1fr] min-h-screen items-start">
 
-        <SideBar></SideBar>
+        <div className="sticky top-0 h-screen hidden md:block">
+          <SideBar></SideBar>
+        </div>
 
-        {children}
+        <div className="min-h-screen">
+          <div className="">
+            <SearchBar></SearchBar>
+          </div>
+          <main className="p-3">
+            {children}
+            <div className="md:hidden text-center">
+              <Footer></Footer>
+            </div>
+          </main>
+        </div>
 
       </div>
       </body>
