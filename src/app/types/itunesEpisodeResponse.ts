@@ -1,8 +1,6 @@
-import {Genre} from "@/app/types/Program.entity";
-
 export interface ItunesEpisodeResponse {
 
-  artistIds: any[];
+  // artistIds: any[];
 
   artworkUrl600: string;
 
@@ -52,4 +50,9 @@ export interface ItunesEpisodeResponse {
   trackViewUrl: string;
 
   episodeUrl: string;
+}
+
+export interface Genre {
+  id: number;
+  name: string;
 }
