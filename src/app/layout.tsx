@@ -23,11 +23,11 @@ export default function RootLayout({
           <SideBar></SideBar>
         </div>
 
-        <div className="min-h-screen">
+        <div className="min-h-screen md:max-w-[calc(100vw-225px)] max-w-screen">
           <div className="">
             <SearchBar></SearchBar>
           </div>
-          <main className="p-3">
+          <main className="">
             {children}
             <div className="md:hidden text-center">
               <Footer></Footer>
