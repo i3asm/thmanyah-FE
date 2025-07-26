@@ -12,7 +12,6 @@ export default function SearchBar() {
   const searchParams = useSearchParams();
   const [searchValue, setSearchValue] = useState(searchParams.get('q') || '');
   useEffect(() => {
-    console.log('useEffect ran')
     const timer = setTimeout(() => {
       const params = new URLSearchParams(searchParams);
       setSearchValue(searchValue.trim());
