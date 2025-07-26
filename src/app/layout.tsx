@@ -3,6 +3,7 @@ import "./globals.css";
 import SideBar from "@/components/sideBar/SideBar";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import Footer from "@/components/footer/Footer";
+import {Suspense} from "react";
 
 export const metadata: Metadata = {
   title: "podcast App",
@@ -25,7 +26,9 @@ export default function RootLayout({
 
         <div className="min-h-screen md:max-w-[calc(100vw-225px)] max-w-screen">
           <div className="">
-            <SearchBar></SearchBar>
+            <Suspense fallback={null}>
+              <SearchBar></SearchBar>
+            </Suspense>
           </div>
           <main className="">
             {children}
