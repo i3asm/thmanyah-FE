@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3031:3000"
+    environment:
+#      API_BASE_URL: https://api.thmanyah.i3asm.xyz
+      API_BASE_URL: http://127.0.0.1:3030
+
