@@ -6,6 +6,6 @@ services:
     ports:
       - "3031:3000"
     environment:
-      NEXT_PUBLIC_API_BASE_URL: https://api.thmanyah.i3asm.xyz
+      NEXT_PUBLIC_API_BASE_URL: https://thmanyahapi.i3asm.xyz
 #      NEXT_PUBLIC_API_BASE_URL: http://127.0.0.1:3030
 

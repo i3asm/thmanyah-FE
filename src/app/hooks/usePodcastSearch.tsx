@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useSearchParams} from "next/navigation";
 import {ItunesSearchResponse} from "@/app/types/itunesSearchResponse";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.thmanyah.i3asm.xyz';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://thmanyahapi.i3asm.xyz';
 
 export function usePodcastSearch() {
   const [searchResult, setSearchResult] = useState<ItunesSearchResponse | null>();
